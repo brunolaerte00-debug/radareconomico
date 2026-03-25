@@ -1,52 +1,56 @@
-import ProgressBar from "@/components/ProgressBar";
-import CTAButton from "@/components/CTAButton";
-import logo from "@/assets/logo.png";
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Econômico - Ofertas Shopee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f8f9fa; }
+        .progress-bar { height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; width: 100%; }
+        .progress-fill { height: 100%; background: #ff5205; width: 85%; animation: grow 2s ease-out; }
+        @keyframes grow { from { width: 0; } to { width: 85%; } }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans">
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <main className="flex-1 flex flex-col items-center justify-center py-4 px-4 gap-4 max-w-lg mx-auto w-full">
-        {/* Logo */}
-        <img src={logo} alt="Garimpo da Shopee" className="w-28 h-28 rounded-full shadow-lg" />
+    <main class="flex-1 flex flex-col items-center justify-center py-8 px-4 gap-6 max-w-lg mx-auto w-full">
+        <img src="https://img.icons8.com/color/144/shopping-cart-loaded.png" alt="Logo" class="w-24 h-24 rounded-full shadow-lg bg-white p-2">
 
-        {/* Brand */}
-        <p className="text-xs font-semibold tracking-widest uppercase text-primary">
-          Radar Econômico
+        <p class="text-xs font-semibold tracking-widest uppercase text-orange-600">
+            Radar Econômico
         </p>
 
-        {/* Seção 1 – Headline */}
-        <div className="text-center space-y-1.5">
-          <h1 className="text-2xl sm:text-4xl font-black leading-tight text-foreground">
-            Ofertas da Shopee & Mais direto no seu{" "}
-            <span className="text-accent">WhatsApp</span>
-          </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Produtos baratos, bonitos e funcionais para transformar sua casa todos os dias.
-          </p>
+        <div class="text-center space-y-2">
+            <h1 class="text-3xl sm:text-4xl font-black leading-tight text-slate-900">
+                Ofertas da Shopee & Mais direto no seu <span class="text-green-500">WhatsApp</span>
+            </h1>
+            <p class="text-sm text-slate-500 leading-relaxed">
+                Produtos baratos, bonitos e funcionais para transformar sua casa todos os dias.
+            </p>
         </div>
 
-        {/* Seção 2 – Urgência */}
-        <ProgressBar />
+        <div class="w-full space-y-2">
+            <p class="text-xs text-center font-bold text-slate-600">VAGAS NO GRUPO VIP: 85% CHEIO</p>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
 
-        {/* Seção 3 – Chamada Forte */}
-        <p className="text-lg sm:text-2xl font-bold text-center leading-snug text-foreground px-2">
-          Entre agora no nosso Grupo{" "}
-          <span className="text-primary">VIP</span> e receba achadinhos que esgotam rápido!
+        <p class="text-xl font-bold text-center leading-snug text-slate-800 px-2">
+            Entre agora no nosso Grupo <span class="text-orange-600 border-b-2 border-orange-600">VIP</span> e receba achadinhos que esgotam rápido!
         </p>
 
-        {/* Seção 4 & 5 – CTA + Confiança */}
-        <CTAButton />
-      </main>
+        <a href="SEU_LINK_DO_WHATSAPP_AQUI" class="w-full bg-green-500 hover:bg-green-600 text-white font-black py-4 px-8 rounded-2xl shadow-xl text-center text-lg transform transition active:scale-95 flex items-center justify-center gap-2">
+            QUERO ENTRAR NO GRUPO AGORA
+        </a>
+        
+        <p class="text-[10px] text-slate-400 italic font-medium uppercase">Acesso Gratuito • Somente Ofertas Selecionadas</p>
+    </main>
 
-      {/* Rodapé */}
-      <footer className="py-6 px-4 text-center">
-        <p className="text-xs text-muted-foreground">
-          Página informativa independente. Não somos afiliados oficiais da Shopee.
+    <footer class="py-6 px-4 text-center">
+        <p class="text-xs text-slate-400">
+            Página informativa independente. Não somos afiliados oficiais da Shopee.
         </p>
-      </footer>
-    </div>
-  );
-};
+    </footer>
 
-export default Index;
-
+</body>
+</html>
